@@ -1,0 +1,17 @@
+{
+  "name": "@bit/toringo.comp.product-list",
+  "version": "0.0.4",
+  "homepage": "https://bit.dev/toringo/comp/product-list",
+  "main": "dist/product-list.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {
+    "react": "^16.9.0"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/compilers/react@1.0.16"
+    }
+  }
+}

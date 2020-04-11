@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+:root {
+  /* 模式切换变量，默认light模式 */
+  /* --current-background-color: var(--light-background-color);
+  --current-primary-color: var(--light-primary-color); */
+
+  /* 浅色主题 */
+  --light-primary-color: #666;
+  --light-background-color: #fff;
+
+  /* 深色主题 */
+  --dark-primary-color: #fff;
+  --dark-background-color: #282c34;
+
+  /* color-scheme: light dark; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* 浅色主题 */
+    /* --current-background-color: #282c34;
+    --current-primary-color: #fff; */
   }
 }
 
-.App-header {
-  background-color: #282c34;
+@media (prefers-color-scheme: light) {
+  :root {
+    /* 深色主题 */
+    /* --current-background-color: #fff;
+    --current-primary-color: #282c34; */
+  }
+}
+
+.App {
+  /* color: var(--current-primary-color);
+  background-color: var(--current-background-color); */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  transition: background-color 0.3s;
+  isolation: isolate;
 }
 
-.App-link {
-  color: #61dafb;
+.App-light {
+  color: var(--light-primary-color);
+  background-color: var(--light-background-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-dark {
+  color: var(--dark-primary-color);
+  background-color: var(--dark-background-color);
 }
